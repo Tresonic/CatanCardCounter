@@ -5,7 +5,6 @@ const cacheName = 'static-cache-v1';
 var filesToCache = [
   '/index.html',
   '/build/bundle.js',
-  '/build/bundle.css',
 ];
 
 self.addEventListener("install", function (e) {
