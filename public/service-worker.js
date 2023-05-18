@@ -7,7 +7,7 @@ var filesToCache = [
   '/build/bundle.js',
 ];
 
-self.addEventListener("install", function (e) {
+self.addEventListener("install", e => {
   console.log("[SW] install");
   e.waitUntil(
     caches.open(cacheName).then(function (cache) {
