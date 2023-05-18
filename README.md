@@ -1,1 +1,1 @@
-# CatanCounter
+# CatanCardCounter
