@@ -5,10 +5,9 @@ const cacheName = 'static-cache-v1';
 var filesToCache = [
   '/index.html',
   '/build/bundle.js',
-  '/build/bundle.css',
 ];
 
-self.addEventListener("install", function (e) {
+self.addEventListener("install", e => {
   console.log("[SW] install");
   e.waitUntil(
     caches.open(cacheName).then(function (cache) {
