@@ -3,7 +3,7 @@
   "short_name": "CatanCounter",
   "icons": [
     {
-      "src": "/images/icons/icon-256x256.png",
+      "src": "/images/icons/icon.png",
       "sizes": "256x256",
       "type": "image/png"
     }

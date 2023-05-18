@@ -16,7 +16,7 @@
 
 <main>
 	<div class="header">
-		<span>Card count: {cardCount}</span> <span>Discard: {cardsToDiscard}</span>
+		<span>Kartenzahl: {cardCount}</span> <span>Abzuwerfen: {cardsToDiscard}</span>
 	</div>
 
 	<div class="card-container">
