@@ -1,5 +1,5 @@
 {
-  "name": "catan_counter",
+  "name": "catan_card_counter",
   "version": "0.1",
   "scripts": {
     "build": "rollup -c",
