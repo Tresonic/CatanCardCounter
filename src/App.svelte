@@ -1,6 +1,40 @@
 <script>
+	import seedrandom from "seedrandom";
 	import Card from "./Card.svelte";
-    import DevBar from "./DevBar.svelte";
+	import DevBar from "./DevBar.svelte";
+	import TopBar from "./TopBar.svelte";
+	import Modal, { getModal } from "./Modal.svelte";
+
+	const DEV_CARDS = {
+		knight: "Ritter",
+		vp: "Siegpunkt",
+		monopoly: "Monopol",
+		roadbuilding: "Straßenbau",
+		yop: "Erfindung",
+	};
+
+	function makeDevDeck() {
+		var rng = seedrandom(seed);
+
+		function shuffle(a) {
+			for (let i = a.length - 1; i > 0; i--) {
+				const j = Math.floor(rng() * (i + 1));
+				[a[i], a[j]] = [a[j], a[i]];
+			}
+			return a;
+		}
+
+		let devCards = Array(14)
+			.fill(DEV_CARDS.knight)
+			.concat(Array(5).fill(DEV_CARDS.vp))
+			.concat(Array(2).fill(DEV_CARDS.monopoly))
+			.concat(Array(2).fill(DEV_CARDS.roadbuilding))
+			.concat(Array(2).fill(DEV_CARDS.yop));
+
+		devCards = shuffle(devCards);
+		// console.log(devCards);
+		return devCards;
+	}
 
 	let cards = [
 		{ name: "lumber", count: 0 },
@@ -10,14 +44,30 @@
 		{ name: "sheep", count: 0 },
 	];
 
-	$: cardCount = cards.reduce((count, card) => count + card.count, 0);
-	$: cardsToDiscard = cardCount > 7 ? Math.floor(cardCount / 2) : 0;
+	let devCards = [
+		{ name: "playedKnights", count: 0 },
+		{ name: "vp", count: 0 },
+		{ name: "knight", count: 0 },
+		{ name: "roadbuilding", count: 0 },
+		{ name: "yop", count: 0 },
+		{ name: "monopoly", count: 0 },
+
+	];
+
+	let seed = new Date().toDateString();
+
+	let devDeck = makeDevDeck(seed);
+
 </script>
 
-<main>
-	<div class="header">
-		<span>Kartenzahl: {cardCount}</span> <span>Abzuwerfen: {cardsToDiscard}</span>
-	</div>
+<div class="full">
+	<Modal id="seed">
+        <div>Seed für Entwicklungskartenstapel:</div>
+        <input bind:value={seed} placeholder="Seed">
+		<button on:click={() => {makeDevDeck(); getModal("seed").close()}}>Ok</button>
+    </Modal>
+
+	<TopBar {cards} />
 
 	<div class="card-container">
 		{#each cards as card}
@@ -25,46 +75,22 @@
 		{/each}
 	</div>
 
-	<DevBar />
-</main>
+	<DevBar bind:devCards={devCards} />
+</div>
 
 <style>
-	main {
-		position:fixed;
-		padding:0;
-		margin:0;
-
-		top:0;
-		left:0;
-
-		width: 100%;
+	.full {
 		height: 100%;
+		width: 100%;
 
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
 		align-items: center;
 	}
-	
-	span {
-		font-size: 20px;
-		margin: 10px;
-	}
-
-	.header {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
 
 	.card-container {
 		width: 90%;
-	}
-
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+		/* height: 70%; */
 	}
 </style>

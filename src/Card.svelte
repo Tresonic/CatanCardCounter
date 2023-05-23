@@ -22,7 +22,7 @@
         text-align: center;
         margin-top: 10px;
         width: 100%;
-        height: 15vh;
+        /* height: 100%; */
 	}
 
 	button {
