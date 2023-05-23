@@ -1,10 +1,16 @@
 'use strict';
 
 // Update cache names any time any of the cached files change.
-const cacheName = 'static-cache-v1';
+const cacheName = 'catancardcounter-v0';
 var filesToCache = [
   '/index.html',
+  '/global.css',
   '/build/bundle.js',
+  '/images/brick.jpeg',
+  '/images/lumber.jpeg',
+  '/images/ore.jpeg',
+  '/images/sheep.jpeg',
+  '/images/wheat.jpeg',
 ];
 
 self.addEventListener("install", e => {
