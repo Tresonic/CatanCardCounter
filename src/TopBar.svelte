@@ -14,7 +14,7 @@
 
 <div class="header">
     <span><Cards class="icon" /> {cardCount}</span>
-    <button><Delete class="icon" />{cardsToDiscard}</button>
+    <span><Delete class="icon" />{cardsToDiscard}</span>
     <button on:click={() => {diceThrow=Math.floor(Math.random()*6+1) + Math.floor(Math.random()*6+1); getModal("dice").open()}}>
         <DiceMultiple class="icon" />
     </button>
@@ -40,7 +40,6 @@
     button {
         margin: 10px;
         padding: 5px 10px;
-        /* padding-right: 8px; */
         font-size: 25px;
     }
 </style>

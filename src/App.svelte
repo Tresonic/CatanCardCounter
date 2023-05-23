@@ -4,14 +4,7 @@
 	import DevBar from "./DevBar.svelte";
 	import TopBar from "./TopBar.svelte";
 	import Modal, { getModal } from "./Modal.svelte";
-
-	const DEV_CARDS = {
-		knight: "Ritter",
-		vp: "Siegpunkt",
-		monopoly: "Monopol",
-		roadbuilding: "Straßenbau",
-		yop: "Erfindung",
-	};
+	import { DEV_CARDS } from "./util.js";
 
 	function makeDevDeck() {
 		var rng = seedrandom(seed);
@@ -24,16 +17,16 @@
 			return a;
 		}
 
-		let devCards = Array(14)
+		let n = Array(14)
 			.fill(DEV_CARDS.knight)
 			.concat(Array(5).fill(DEV_CARDS.vp))
 			.concat(Array(2).fill(DEV_CARDS.monopoly))
 			.concat(Array(2).fill(DEV_CARDS.roadbuilding))
 			.concat(Array(2).fill(DEV_CARDS.yop));
 
-		devCards = shuffle(devCards);
-		// console.log(devCards);
-		return devCards;
+		n = shuffle(n);
+		console.log(n);
+		return n;
 	}
 
 	let cards = [
@@ -44,28 +37,25 @@
 		{ name: "sheep", count: 0 },
 	];
 
-	let devCards = [
-		{ name: "playedKnights", count: 0 },
-		{ name: "vp", count: 0 },
-		{ name: "knight", count: 0 },
-		{ name: "roadbuilding", count: 0 },
-		{ name: "yop", count: 0 },
-		{ name: "monopoly", count: 0 },
-
-	];
+	let devCards = Array(Object.keys(DEV_CARDS).length).fill(0);
 
 	let seed = new Date().toDateString();
 
 	let devDeck = makeDevDeck(seed);
 
+	function seedDevDeck() {
+		devCards = Array(Object.keys(DEV_CARDS).length).fill(0);
+		devDeck = makeDevDeck();
+		getModal("seed").close();
+	}
 </script>
 
 <div class="full">
 	<Modal id="seed">
-        <div>Seed für Entwicklungskartenstapel:</div>
-        <input bind:value={seed} placeholder="Seed">
-		<button on:click={() => {makeDevDeck(); getModal("seed").close()}}>Ok</button>
-    </Modal>
+		<div>Seed für Entwicklungskartenstapel:</div>
+		<input bind:value={seed} placeholder="Seed" />
+		<button on:click={seedDevDeck}>Ok</button>
+	</Modal>
 
 	<TopBar {cards} />
 
@@ -75,7 +65,7 @@
 		{/each}
 	</div>
 
-	<DevBar bind:devCards={devCards} />
+	<DevBar bind:devCards={devCards} bind:devDeck={devDeck} />
 </div>
 
 <style>
