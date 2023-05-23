@@ -65,7 +65,7 @@
 		{/each}
 	</div>
 
-	<DevBar bind:devCards={devCards} bind:devDeck={devDeck} />
+	<DevBar bind:devCards bind:devDeck />
 </div>
 
 <style>

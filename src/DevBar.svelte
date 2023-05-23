@@ -12,10 +12,9 @@
 
     import { DEV_CARDS } from "./util.js";
 
-    export let devCards;
     export let devDeck;
+    export let devCards;
 
-    // $: remainingDevCards = devCards.reduce((count, val) => count - val, 25)
     $: remainingDevCards = devDeck.length;
     
     function discardDevcard() {
@@ -25,14 +24,15 @@
     }
     const buyDevcard = () => {
         const card = devDeck.pop();
-        console.log(devCards);
         devCards[card] += 1;
-        console.log(devCards);
-
         remainingDevCards--;
     }
     function playDevcard(type) {
         devCards[type]--;
+        if (type === DEV_CARDS.knight) {
+            devCards[DEV_CARDS.playedKnights]++;
+        }
+        getModal("devcards").close();
     }
 </script>
 
@@ -51,17 +51,17 @@
     <Modal id="devcards">
 		<div>Entwicklungskarte ausspielen:</div>
 		<div>
-            {#if devCards[DEV_CARDS.knight]}
-                <button on:click={playDevcard(DEV_CARDS.knight)}><span><Sword class="icon" /></span></button>
+            {#if devCards[DEV_CARDS.knight] > 0}
+                <button on:click={() => playDevcard(DEV_CARDS.knight)}><span><Sword class="icon" /></span></button>
             {/if}
-            {#if devCards[DEV_CARDS.yop]}
-                <button on:click={playDevcard(DEV_CARDS.yop)}><span><HeadLightbulbOutline class="icon" /></span></button>
+            {#if devCards[DEV_CARDS.yop] > 0}
+                <button on:click={() => playDevcard(DEV_CARDS.yop)}><span><HeadLightbulbOutline class="icon" /></span></button>
             {/if}   
-            {#if devCards[DEV_CARDS.roadbuilding]}
-                <button on:click={playDevcard(DEV_CARDS.roadbuilding)}><span><Road class="icon" /></span></button>
+            {#if devCards[DEV_CARDS.roadbuilding] > 0}
+                <button on:click={() => playDevcard(DEV_CARDS.roadbuilding)}><span><Road class="icon" /></span></button>
             {/if}
-            {#if devCards[DEV_CARDS.monopoly]}
-                <button on:click={playDevcard(DEV_CARDS.monopoly)}><span><HatFedora class="icon" /></span></button>
+            {#if devCards[DEV_CARDS.monopoly] > 0}
+                <button on:click={() => playDevcard(DEV_CARDS.monopoly)}><span><HatFedora class="icon" /></span></button>
             {/if}
         </div>
 	</Modal>
