@@ -29,13 +29,13 @@
         width: 100%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        column-gap: 20px;
+        column-gap: 2%;
         justify-content: center;
         align-items: center;
     }
 
     span {
-        margin: 10px;
+        margin: 10px 5px;
         font-size: 25px;
     }
 
