@@ -40,10 +40,15 @@ self.addEventListener("activate", e => {
 self.addEventListener("fetch", e => {
   console.log("[SW] fetch " + e.request.url);
 
+  // Cache-First Strategy
   e.respondWith(
-    (async function () {
-      const response = await caches.match(e.request);
-      return response || fetch(e.request);
-    })()
+    caches
+      .match(e.request) // check if the request has already been cached
+      .then(cached => cached || fetch(e.request)) // otherwise request network
+      .then(
+        response =>
+          cache(e.request, response) // put response in cache
+            .then(() => response) // resolve promise with the network response
+      )
   );
 });
