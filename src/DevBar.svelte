@@ -84,6 +84,7 @@
 
     button {
         height: 40%;
+        font-size: 1.2em;
     }
 
     span {
