@@ -27,9 +27,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="px"
      showgrid="true"
-     inkscape:zoom="0.75811588"
-     inkscape:cx="-101.56759"
-     inkscape:cy="227.53777"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="154.14928"
+     inkscape:cy="161.39712"
      inkscape:window-width="1920"
      inkscape:window-height="1025"
      inkscape:window-x="0"
@@ -46,24 +46,6 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <path
-       sodipodi:type="star"
-       style="fill:#c9c9c9;stroke-width:0;fill-opacity:1"
-       id="path690"
-       inkscape:flatsided="true"
-       sodipodi:sides="6"
-       sodipodi:cx="60"
-       sodipodi:cy="65"
-       sodipodi:r1="121.07631"
-       sodipodi:r2="32.882366"
-       sodipodi:arg1="0"
-       sodipodi:arg2="0.52359878"
-       inkscape:rounded="0.01"
-       inkscape:randomized="0"
-       d="m 181.07631,65 c 0,1.210763 -59.4896,104.24978 -60.53816,104.85516 -1.04855,0.60538 -120.02775301,0.60538 -121.0763046,0 C -1.5867062,169.24978 -61.076309,66.210763 -61.076309,65 c 0,-1.210763 59.4896028,-104.249778 60.5381544,-104.85516 1.04855159,-0.605381 120.0277546,-0.605381 121.0763046,0 1.04856,0.605382 60.53816,103.644397 60.53816,104.85516 z"
-       inkscape:transform-center-x="-11.919873"
-       inkscape:transform-center-y="-5"
-       transform="translate(68,63)" />
     <text
        xml:space="preserve"
        style="font-size:32px;font-family:KacstPoster;-inkscape-font-specification:KacstPoster;fill:#c9c9c9;fill-opacity:1;stroke:#b91b1b;stroke-width:0;stroke-opacity:1"
@@ -74,39 +56,60 @@
          id="tspan1345"
          x="69.245392"
          y="119.67567" /></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;line-height:0.8;font-family:KacstPoster;-inkscape-font-specification:KacstPoster;fill:#c9c9c9;fill-opacity:1;stroke:#b91b1b;stroke-width:0;stroke-opacity:1"
-       x="104.30313"
-       y="106.69212"
-       id="text1351"><tspan
-         sodipodi:role="line"
+    <g
+       id="g304">
+      <path
+         sodipodi:type="star"
+         style="fill:#c9c9c9;fill-opacity:1;stroke-width:0"
+         id="path690"
+         inkscape:flatsided="true"
+         sodipodi:sides="6"
+         sodipodi:cx="60"
+         sodipodi:cy="65"
+         sodipodi:r1="128"
+         sodipodi:r2="32.882366"
+         sodipodi:arg1="4.1198528e-08"
+         sodipodi:arg2="0.52359882"
+         inkscape:rounded="0.01"
+         inkscape:randomized="0"
+         d="m 188,65.000005 c 0,1.28 -62.89149,110.211245 -64,110.851245 -1.10852,0.64 -126.8914921,0.64 -128.0000046,0 C -5.1085171,175.21125 -68,66.279995 -68,64.999995 c 0,-1.28 62.891492,-110.211249 64.0000046,-110.851249 1.1085125,-0.64 126.8914854,-0.639995 127.9999954,5e-6 1.10852,0.64 64,109.571254 64,110.851254 z"
+         inkscape:transform-center-x="-11.919873"
+         inkscape:transform-center-y="-5"
+         transform="translate(68,63)" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;line-height:0.8;font-family:KacstPoster;-inkscape-font-specification:KacstPoster;fill:#c9c9c9;fill-opacity:1;stroke:#b91b1b;stroke-width:0;stroke-opacity:1"
          x="104.30313"
          y="106.69212"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:Pagul;-inkscape-font-specification:Pagul;fill:#c90000;fill-opacity:1"
-         id="tspan1353"
-         dy="0">atan</tspan><tspan
-         sodipodi:role="line"
-         x="104.30313"
-         y="140.68555"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:Pagul;-inkscape-font-specification:Pagul;fill:#c90000;fill-opacity:1"
-         id="tspan1357">ard</tspan><tspan
-         sodipodi:role="line"
-         x="104.30313"
-         y="174.67897"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:Pagul;-inkscape-font-specification:Pagul;fill:#c90000;fill-opacity:1"
-         id="tspan1359">ounter</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:121.255px;font-family:serif;-inkscape-font-specification:serif;fill:#c90000;fill-opacity:1;stroke:#b91b1b;stroke-width:0;stroke-opacity:1"
-       x="18.435022"
-       y="169.35635"
-       id="text1465"
-       transform="scale(0.9782647,1.0222182)"><tspan
-         id="tspan1463"
+         id="text1351"><tspan
+           sodipodi:role="line"
+           x="104.30313"
+           y="106.69212"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:Pagul;-inkscape-font-specification:Pagul;fill:#c90000;fill-opacity:1"
+           id="tspan1353"
+           dy="0">atan</tspan><tspan
+           sodipodi:role="line"
+           x="104.30313"
+           y="140.68555"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:Pagul;-inkscape-font-specification:Pagul;fill:#c90000;fill-opacity:1"
+           id="tspan1357">ard</tspan><tspan
+           sodipodi:role="line"
+           x="104.30313"
+           y="174.67897"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:Pagul;-inkscape-font-specification:Pagul;fill:#c90000;fill-opacity:1"
+           id="tspan1359">ounter</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:121.255px;font-family:serif;-inkscape-font-specification:serif;fill:#c90000;fill-opacity:1;stroke:#b91b1b;stroke-width:0;stroke-opacity:1"
          x="18.435022"
          y="169.35635"
-         sodipodi:role="line"
-         style="font-size:121.255px;stroke-width:0">C</tspan></text>
+         id="text1465"
+         transform="scale(0.9782647,1.0222182)"><tspan
+           id="tspan1463"
+           x="18.435022"
+           y="169.35635"
+           sodipodi:role="line"
+           style="font-size:121.255px;stroke-width:0">C</tspan></text>
+    </g>
   </g>
 </svg>
