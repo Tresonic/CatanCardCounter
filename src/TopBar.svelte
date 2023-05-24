@@ -27,9 +27,11 @@
 <style>
     .header {
         width: 100%;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 20px;
+        justify-content: center;
         align-items: center;
-        justify-content: space-evenly;
     }
 
     span {
@@ -38,7 +40,7 @@
     }
 
     button {
-        margin: 10px;
+        height: 80%;
         padding: 5px 10px;
         font-size: 25px;
     }

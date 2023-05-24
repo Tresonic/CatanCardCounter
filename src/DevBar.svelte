@@ -9,7 +9,6 @@
     import HatFedora from "svelte-material-icons/HatFedora.svelte";
     import StackOverflow from "svelte-material-icons/StackOverflow.svelte";
 
-
     import { DEV_CARDS } from "./util.js";
 
     export let devDeck;
@@ -71,10 +70,9 @@
     .devbar {
         width: 100%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
         font-size: 15px;
-        margin: 10px;
     }
 
     .devcol {
@@ -82,6 +80,10 @@
         flex-direction: column;
         justify-content: space-evenly;
         height: 100%;
+    }
+
+    button {
+        height: 40%;
     }
 
     span {

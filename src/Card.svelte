@@ -20,29 +20,31 @@
         justify-content: space-between;
         align-items: center;
         text-align: center;
-        margin-top: 10px;
         width: 100%;
-        /* height: 100%; */
 	}
 
 	button {
 		margin: 0;
         height: 100%;
         width: 30%;
-        font-size: xx-large;
+        font-size: 4em;
+        padding: 0;
 	}
+
+    span {
+        font-size: 4em;
+    }
 
     .img {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 50%;
+        width: 30%;
         height: 100%;
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
         color: white;
-        font-size: 5em;
         line-height: 100%;
     }
 </style>

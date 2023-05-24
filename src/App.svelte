@@ -72,15 +72,16 @@
 	.full {
 		height: 100%;
 		width: 100%;
-
-		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
-		align-items: center;
+		padding: 8px;
+		box-sizing: border-box;
+		display: grid;
+		grid-template-rows: 2fr 13fr 3fr;
+		row-gap: 10px;
 	}
 
 	.card-container {
-		width: 90%;
-		/* height: 70%; */
+		display: grid;
+		grid-template-rows: repeat(5, 1fr);
+		row-gap: 5px;
 	}
 </style>
