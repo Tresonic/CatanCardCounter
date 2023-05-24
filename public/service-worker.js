@@ -37,6 +37,16 @@ self.addEventListener("activate", e => {
   );
 });
 
+function cache(request, response) {
+  if (response.type === "error" || response.type === "opaque") {
+    return Promise.resolve(); // do not put in cache network errors
+  }
+
+  return caches
+    .open(cacheName)
+    .then(cache => cache.put(request, response.clone()));
+}
+
 self.addEventListener("fetch", e => {
   console.log("[SW] fetch " + e.request.url);
 
