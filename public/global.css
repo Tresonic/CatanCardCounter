@@ -2,19 +2,13 @@ body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	/* min-height: -webkit-fill-available; */
 	height: 100vh;
 	font-family: "Helvetica Neue", sans-serif;
 
 }
 
-/* html {
-	height: -webkit-fill-available;
-} */
-
 .icon {
 	position: relative;
-	/* Adjust these values accordingly */
 	top: 3px;
 }
 
@@ -48,32 +42,3 @@ button:not(:disabled):active {
 button:focus {
 	border-color: #666;
 }
-
-/* a {
-	color: rgb(0,100,200);
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:visited {
-	color: rgb(0,80,160);
-}
-
-label {
-	display: block;
-}
-
-
-
-input:disabled {
-	color: #ccc;
-}
-
-input[type="range"] {
-	height: 0;
-}
-
- */

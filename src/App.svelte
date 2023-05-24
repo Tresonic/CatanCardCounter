@@ -63,7 +63,6 @@
   </Modal>
 
   <TopBar {cards} />
-  <!-- {window.innerHeight} -->
   <div class="card-container">
     {#each cards as card}
       <Card bind:count={card.count} name={card.name} />
