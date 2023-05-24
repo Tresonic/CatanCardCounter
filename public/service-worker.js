@@ -3,6 +3,7 @@
 // Update cache names any time any of the cached files change.
 const cacheName = 'catancardcounter-v1';
 var filesToCache = [
+  '/',
   '/index.html',
   '/global.css',
   '/build/bundle.js',
