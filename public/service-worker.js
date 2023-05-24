@@ -1,7 +1,7 @@
 'use strict';
 
 // Update cache names any time any of the cached files change.
-const cacheName = 'catancardcounter-v1';
+const cacheName = 'catancardcounter-v2';
 var filesToCache = [
   '/',
   '/index.html',
