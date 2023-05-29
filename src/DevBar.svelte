@@ -51,16 +51,16 @@
 		<div>Entwicklungskarte ausspielen:</div>
 		<div>
             {#if devCards[DEV_CARDS.knight] > 0}
-                <button on:click={() => playDevcard(DEV_CARDS.knight)}><span><Sword class="icon" /></span></button>
+                <div class="devplay"><button on:click={() => playDevcard(DEV_CARDS.knight)}><span><Sword class="icon" /></span></button> Versetze den Räuber von deinem Feld.</div>
             {/if}
             {#if devCards[DEV_CARDS.yop] > 0}
-                <button on:click={() => playDevcard(DEV_CARDS.yop)}><span><HeadLightbulbOutline class="icon" /></span></button>
+                <div class="devplay"><button on:click={() => playDevcard(DEV_CARDS.yop)}><span><HeadLightbulbOutline class="icon" /></span></button> Ziehe zwei beliebige Rohstoffkarten.</div>
             {/if}   
             {#if devCards[DEV_CARDS.roadbuilding] > 0}
-                <button on:click={() => playDevcard(DEV_CARDS.roadbuilding)}><span><Road class="icon" /></span></button>
+                <div class="devplay"><button on:click={() => playDevcard(DEV_CARDS.roadbuilding)}><span><Road class="icon" /></span></button> Baue zwei Straßen.</div>
             {/if}
             {#if devCards[DEV_CARDS.monopoly] > 0}
-                <button on:click={() => playDevcard(DEV_CARDS.monopoly)}><span><HatFedora class="icon" /></span></button>
+                <div class="devplay"><button on:click={() => playDevcard(DEV_CARDS.monopoly)}><span><HatFedora class="icon" /></span></button> Wähle einen Rohstoff und sammle alle Karten dieses Rohstoffs der Mitspieler ein.</div>
             {/if}
         </div>
 	</Modal>
@@ -80,6 +80,12 @@
         flex-direction: column;
         justify-content: space-evenly;
         height: 100%;
+    }
+
+    .devplay {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     button {
